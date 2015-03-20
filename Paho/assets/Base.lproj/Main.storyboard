@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D105g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Broker address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kcw-wi-yUk">
+                                <rect key="frame" x="31" y="209" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="500" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="tcp://192.168.2.110" placeholder="tcp://mqtt.relayr.io:1883" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="woi-PJ-K0S" customClass="RLYTextField">
+                                <rect key="frame" x="168" y="203" width="401" height="31"/>
+                                <color key="backgroundColor" red="0.91027926319999997" green="0.91027926319999997" blue="0.91027926319999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="heightInset">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="widthInset">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Ptp-ha-PqI"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ls-JL-H3L">
+                                <rect key="frame" x="0.0" y="306" width="600" height="203"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscribe to topic:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rG-E7-RVf">
+                                        <rect key="frame" x="15" y="11" width="154" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ty-Ss-GHy" customClass="RLYButton">
+                                        <rect key="frame" x="243" y="51" width="114" height="42"/>
+                                        <color key="backgroundColor" red="0.16315656840000001" green="0.33302133239999998" blue="0.44295900179999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Subscribe">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="disabled">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.75" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                <color key="value" red="0.11897065749999999" green="0.24212893320000001" blue="0.32679738559999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedBackgroundColor">
+                                                <color key="value" red="0.90196078430000004" green="0.074509803920000006" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
+                                                <color key="value" red="0.11897065749999999" green="0.24212893320000001" blue="0.32679738559999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="heightInset">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="widthInset">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="subscribeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d4H-nV-ukK"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Publish to topic:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epu-Xg-rsQ">
+                                        <rect key="frame" x="44" y="114" width="125" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="/somabar/1/data" placeholder="/topic/path" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6xz-TY-71F" customClass="RLYTextField">
+                                        <rect key="frame" x="184" y="108" width="401" height="31"/>
+                                        <color key="backgroundColor" red="0.91027926319999997" green="0.91027926319999997" blue="0.91027926319999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="heightInset">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="widthInset">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="w3T-3u-ecv"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65C-PM-Ohj" customClass="RLYButton">
+                                        <rect key="frame" x="476" y="154" width="114" height="42"/>
+                                        <color key="backgroundColor" red="0.16315656840000001" green="0.33302133239999998" blue="0.44295900179999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Publish">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="disabled" title="Publishing">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.75" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                <color key="value" red="0.11897065749999999" green="0.24212893320000001" blue="0.32679738559999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedBackgroundColor">
+                                                <color key="value" red="0.90196078430000004" green="0.074509803920000006" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
+                                                <color key="value" red="0.11897065749999999" green="0.24212893320000001" blue="0.32679738559999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="heightInset">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="widthInset">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="publishButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h3f-uA-0Sd"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="message body" placeholder="message body" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KGe-pe-ZN8" customClass="RLYTextField">
+                                        <rect key="frame" x="20" y="159" width="431" height="31"/>
+                                        <color key="backgroundColor" red="0.91027926319999997" green="0.91027926319999997" blue="0.91027926319999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="heightInset">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="widthInset">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="maf-Wr-GWk"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="/somabar/1/data" placeholder="/topic/path" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ERG-ns-J6X" customClass="RLYTextField">
+                                        <rect key="frame" x="184" y="5" width="401" height="31"/>
+                                        <color key="backgroundColor" red="0.91027926319999997" green="0.91027926319999997" blue="0.91027926319999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="heightInset">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="widthInset">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="SXT-6Y-tzZ"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.05860213676" green="0.1181552028" blue="0.15508021390000001" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="6xz-TY-71F" firstAttribute="centerY" secondItem="Epu-Xg-rsQ" secondAttribute="centerY" id="1tF-Ri-bsF"/>
+                                    <constraint firstItem="Epu-Xg-rsQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4Ls-JL-H3L" secondAttribute="leading" constant="8" id="8YY-fL-o4J"/>
+                                    <constraint firstItem="8rG-E7-RVf" firstAttribute="centerY" secondItem="ERG-ns-J6X" secondAttribute="centerY" id="DA0-84-2yy"/>
+                                    <constraint firstItem="ERG-ns-J6X" firstAttribute="leading" secondItem="8rG-E7-RVf" secondAttribute="trailing" constant="15" id="Dcv-Rd-Jp2"/>
+                                    <constraint firstItem="6xz-TY-71F" firstAttribute="leading" secondItem="Epu-Xg-rsQ" secondAttribute="trailing" constant="15" id="F8X-lp-UO2"/>
+                                    <constraint firstAttribute="trailing" secondItem="6xz-TY-71F" secondAttribute="trailing" constant="15" id="IAp-Mm-Wqd"/>
+                                    <constraint firstItem="8Ty-Ss-GHy" firstAttribute="top" secondItem="ERG-ns-J6X" secondAttribute="bottom" constant="15" id="MVl-rD-giF"/>
+                                    <constraint firstAttribute="trailing" secondItem="ERG-ns-J6X" secondAttribute="trailing" constant="15" id="PJN-ob-RxQ"/>
+                                    <constraint firstItem="8Ty-Ss-GHy" firstAttribute="width" secondItem="65C-PM-Ohj" secondAttribute="width" id="PXa-PN-7YE"/>
+                                    <constraint firstItem="6xz-TY-71F" firstAttribute="width" secondItem="ERG-ns-J6X" secondAttribute="width" id="RUd-X8-jXB"/>
+                                    <constraint firstItem="8rG-E7-RVf" firstAttribute="leading" secondItem="4Ls-JL-H3L" secondAttribute="leading" constant="15" id="U3S-KT-Sel"/>
+                                    <constraint firstItem="KGe-pe-ZN8" firstAttribute="leading" secondItem="4Ls-JL-H3L" secondAttribute="leading" constant="20" id="UpR-gK-GAq"/>
+                                    <constraint firstItem="ERG-ns-J6X" firstAttribute="top" secondItem="4Ls-JL-H3L" secondAttribute="top" constant="5" id="WZS-dp-r0o"/>
+                                    <constraint firstItem="KGe-pe-ZN8" firstAttribute="centerY" secondItem="65C-PM-Ohj" secondAttribute="centerY" id="XCH-yA-lfa"/>
+                                    <constraint firstAttribute="trailing" secondItem="65C-PM-Ohj" secondAttribute="trailing" constant="10" id="Y5j-WJ-xm2"/>
+                                    <constraint firstItem="6xz-TY-71F" firstAttribute="top" secondItem="8Ty-Ss-GHy" secondAttribute="bottom" constant="15" id="bYJ-ul-fgr"/>
+                                    <constraint firstAttribute="bottom" secondItem="KGe-pe-ZN8" secondAttribute="bottom" constant="13" id="fy4-M8-frh"/>
+                                    <constraint firstAttribute="centerX" secondItem="8Ty-Ss-GHy" secondAttribute="centerX" id="hul-yi-05e"/>
+                                    <constraint firstItem="65C-PM-Ohj" firstAttribute="leading" secondItem="KGe-pe-ZN8" secondAttribute="trailing" constant="25" id="qiC-ky-iYo"/>
+                                    <constraint firstItem="KGe-pe-ZN8" firstAttribute="top" secondItem="6xz-TY-71F" secondAttribute="bottom" constant="20" id="ucU-r6-Q1Y"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6a-uQ-KmV" customClass="RLYButton">
+                                <rect key="frame" x="243" y="249" width="114" height="42"/>
+                                <color key="backgroundColor" red="0.16315656835314918" green="0.3330213324022937" blue="0.44295900177878789" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Connect">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.35000000000000003" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.75" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                        <color key="value" red="0.11897065749527305" green="0.24212893322351514" blue="0.32679738563838401" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedBackgroundColor">
+                                        <color key="value" red="0.90196078430000004" green="0.074509803920000006" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
+                                        <color key="value" red="0.1079388328917556" green="0.21967697759853477" blue="0.29649435533535362" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="heightInset">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="widthInset">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="brokerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yqq-fJ-POf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.05860213676" green="0.1181552028" blue="0.15508021390000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="i6a-uQ-KmV" firstAttribute="top" secondItem="woi-PJ-K0S" secondAttribute="bottom" constant="15" id="7Vu-gy-o4J"/>
+                            <constraint firstItem="4Ls-JL-H3L" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="A69-pe-W1E"/>
+                            <constraint firstAttribute="trailing" secondItem="4Ls-JL-H3L" secondAttribute="trailing" id="AGG-qc-ZtC"/>
+                            <constraint firstItem="Kcw-wi-yUk" firstAttribute="centerY" secondItem="woi-PJ-K0S" secondAttribute="centerY" id="C3E-TO-zI7"/>
+                            <constraint firstItem="8Ty-Ss-GHy" firstAttribute="width" secondItem="i6a-uQ-KmV" secondAttribute="width" id="C9Z-Yn-4oM"/>
+                            <constraint firstItem="woi-PJ-K0S" firstAttribute="width" secondItem="ERG-ns-J6X" secondAttribute="width" id="HKT-Zl-1CD"/>
+                            <constraint firstItem="4Ls-JL-H3L" firstAttribute="top" secondItem="i6a-uQ-KmV" secondAttribute="bottom" constant="15" id="KO4-Ws-SZT"/>
+                            <constraint firstItem="woi-PJ-K0S" firstAttribute="leading" secondItem="Kcw-wi-yUk" secondAttribute="trailing" constant="15" id="Kez-tF-9Kd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="woi-PJ-K0S" secondAttribute="trailing" constant="15" id="XRj-dH-fIT"/>
+                            <constraint firstItem="woi-PJ-K0S" firstAttribute="top" relation="greaterThanOrEqual" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Z3N-Nw-Wea"/>
+                            <constraint firstItem="Kcw-wi-yUk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" priority="750" constant="15" id="h7H-Uz-Inp"/>
+                            <constraint firstAttribute="centerX" secondItem="i6a-uQ-KmV" secondAttribute="centerX" id="jVi-0m-Knc"/>
+                            <constraint firstAttribute="centerY" secondItem="i6a-uQ-KmV" secondAttribute="centerY" priority="250" constant="30" id="m2x-Wp-mbL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="4Ls-JL-H3L" secondAttribute="bottom" constant="8" id="zyZ-If-4CC"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="brokerButton" destination="i6a-uQ-KmV" id="YVa-TX-KQ1"/>
+                        <outlet property="brokerField" destination="woi-PJ-K0S" id="x0v-Tk-Co1"/>
+                        <outlet property="dataView" destination="4Ls-JL-H3L" id="ua4-c0-Vkk"/>
+                        <outlet property="publishBodyField" destination="KGe-pe-ZN8" id="bpl-K7-otT"/>
+                        <outlet property="publishButton" destination="65C-PM-Ohj" id="shj-TN-J4U"/>
+                        <outlet property="publishField" destination="6xz-TY-71F" id="8JB-oz-DX0"/>
+                        <outlet property="subscriptionButton" destination="8Ty-Ss-GHy" id="Gc3-vf-18f"/>
+                        <outlet property="subscriptionField" destination="ERG-ns-J6X" id="if2-ou-FQO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="145.5" y="525"/>
+        </scene>
+    </scenes>
+</document>
