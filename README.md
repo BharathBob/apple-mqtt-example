@@ -11,6 +11,23 @@ The MQTT library used is the C library developed by [Eclipse Paho](https://eclip
 * [Paho C Client](https://eclipse.org/paho/clients/c/).
 * Git repository with the code: http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.c.git
 
+### Update 25/05/2015
+
+If you are trying to use MQTT for an iOS application I will highly recommend you to use a native (Objective-C/Swift) iOS library. Using C or wrapper libraries usually means you are using POSIX networking calls at some point. Apple forbids the use of third party networking libraries from using the mobile internet antenna. Thus if you use Paho or something similar, you can only use MQTT when you are connected to a WiFi network.
+
+|    Name    |        Type       | Programming Language |    Code    |
+|------------|-------------------|----------------------|------------|
+|Paho        |Original           |C                     |Open-Source. [Eclipse project](http://git.eclipse.org/c/paho/org.eclipse.paho.mqtt.c.git)
+|IBM         |Original           |C                     |Close Source. [IBM SDK](http://www-01.ibm.com/support/knowledgecenter/SS9D84_1.0.0/com.ibm.mm.tc.doc/tc10155_.htm)
+|Mosquitto   |Original           |C                     |Open-Source. [Eclipse project](http://git.eclipse.org/c/mosquitto/org.eclipse.mosquitto.git)
+|MQTTKit     |Wrapper (Mosquitto)|Objective-C           |Open-Source. [Github](https://github.com/mobile-web-messaging/MQTTKit)
+|Marquette   |Wrapper (Mosquitto)|Objective-C           |Open-Source. [Github](https://github.com/njh/marquette)
+|Moscapsule  |Wrapper (Mosquitto)|Swift                 |Open-Source. [Github](https://github.com/flightonary/Moscapsule)
+|Musqueteer  |Wrapper (Mosquitto)|Objective-C           |
+|MQTT-Client |Native             |Objective-C           |Open-Source. [Github](https://github.com/ckrey/MQTT-Client-Framework)
+|MQTTSDK     |Native             |Objective-C           |
+|CocoaMQTT   |Native             |Swift                 |Open-Source. [Github](https://github.com/slimpp/CocoaMQTT)
+
 MQTT C Client
 -------------
 
@@ -18,7 +35,7 @@ The Paho MQTT C Client offers two APIs, one synchronous and one asynchronous. Fo
 
 ### Dependencies and binaries
 
-I have build the MQTT Paho source code into a static library called `libMQTT.a` with three headers: `MQTTAsync.h`, `MQTTClient.h`, `MQTTClientPers istance.h`. It can be found under Paho > external > MQTT.
+I have build the MQTT Paho source code into a static library called `libMQTT.a` with three headers: `MQTTAsync.h`, `MQTTClient.h`, `MQTTClientPersistance.h`. It can be found under Paho > external > MQTT.
 
 The binary supports all iOS devices (ARMv7, ARMv7s, ARMv64, and i386 simulator) and OSX machines (x86_64).
 
